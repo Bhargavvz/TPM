@@ -46,7 +46,7 @@ export function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            backgroundImage: 'url(https://content.jdmagicbox.com/v2/comp/hyderabad/f2/040pxx40.xx40.140222195823.b8f2/catalogue/swagruha-food-and-pindi-vantalu-kachiguda-hyderabad-sweet-shops-7kwno38u1c.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
@@ -110,7 +110,7 @@ export function Home() {
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-110"
                     style={{
-                      backgroundImage: category.image_url || 'url(https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=800)',
+                      backgroundImage: `url(${category.image_url})`,
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />

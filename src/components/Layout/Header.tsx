@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, ShoppingCart } from 'lucide-react';
+import { Menu, X, Search, ShoppingCart, Heart } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { getCartCount } = useCart();
+  const { getWishlistCount } = useWishlist();
   const cartCount = getCartCount();
+  const wishlistCount = getWishlistCount();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,6 +92,21 @@ export function Header() {
             >
               <Search className="w-5 h-5" />
             </button>
+
+            <Link
+              to="/wishlist"
+              className={`relative transition-colors hover:text-orange-500 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              aria-label="Wishlist"
+            >
+              <Heart className="w-5 h-5" />
+              {wishlistCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {wishlistCount}
+                </span>
+              )}
+            </Link>
 
             <Link
               to="/cart"
