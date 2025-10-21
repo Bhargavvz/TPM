@@ -6,7 +6,7 @@ export const categories: Category[] = [
     name: 'Snacks',
     slug: 'snacks',
     description: 'Crispy and savory traditional Telangana snacks',
-    image_url: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image_url: 'https://t4.ftcdn.net/jpg/01/73/41/63/360_F_173416361_2YCaYyXrVk6nhNoIkg21515HUWseyqyr.jpg',
     display_order: 1,
     created_at: new Date().toISOString()
   },
@@ -15,7 +15,7 @@ export const categories: Category[] = [
     name: 'Sweets',
     slug: 'sweets',
     description: 'Delicious traditional Telangana sweets',
-    image_url: 'https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=800',
+    image_url: 'https://media.istockphoto.com/id/506797777/photo/colorful-indian-diwali-sweets-in-plain-white-dish.jpg?s=612x612&w=0&k=20&c=AA4Zrdhzom1sU7gi8cEBWz_g6jhivhnJOq86jE-Xp04=',
     display_order: 2,
     created_at: new Date().toISOString()
   },
@@ -24,7 +24,7 @@ export const categories: Category[] = [
     name: 'Veg Pickles',
     slug: 'veg-pickles',
     description: 'Tangy and flavorful homemade pickles',
-    image_url: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ivjNVGjNTKJuvcllyAOzl8bTupLhHub2nw&s',
     display_order: 3,
     created_at: new Date().toISOString()
   }
@@ -297,15 +297,116 @@ export const products: Product[] = [
   }
 ];
 
-export const productImages: ProductImage[] = products.map((product, index) => ({
-  id: `img-${product.id}`,
-  product_id: product.id,
-  image_url: `https://images.pexels.com/photos/${1893556 + index}/pexels-photo-${1893556 + index}.jpeg?auto=compress&cs=tinysrgb&w=800`,
-  alt_text: product.name,
-  is_primary: true,
-  display_order: 1,
-  created_at: new Date().toISOString()
-}));
+export const productImages: ProductImage[] = [
+  {
+    id: 'img-1',
+    product_id: '1',
+    image_url: 'https://us2guntur.com/images//10064img/Chagodi_B_191115.jpg',
+    alt_text: 'Chagodi',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-2',
+    product_id: '2',
+    image_url: 'https://pushmycart.com/cdn/shop/products/5dce32705968462a48b5523b_1200x1200.jpg?v=1742301446',
+    alt_text: 'Chuduva',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-3',
+    product_id: '3',
+    image_url: 'https://i0.wp.com/ahahomefoods.com/wp-content/uploads/2023/02/Garijelu-Coconut-and-Sugar.jpg?fit=600%2C600&ssl=1',
+    alt_text: 'Garjalu',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-4',
+    product_id: '4',
+    image_url: 'https://dpfoods.in/wp-content/uploads/2025/03/bellam-gavvalu.png',
+    alt_text: 'Gavvalu Bellam',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-5',
+    product_id: '5',
+    image_url: 'https://www.telanganapindivantalu.in/wp-content/uploads/2019/12/Karabilallu-pappu.jpg',
+    alt_text: 'Kara Billalu-Pappu',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-6',
+    product_id: '6',
+    image_url: 'https://www.telanganapindivantalu.in/wp-content/uploads/2019/12/Karabilalu-palli.jpg',
+    alt_text: 'Karabillalu-Palli',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-7',
+    product_id: '7',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZxEI0pwvZlKJ23R00By1EciB2a4fJbZjLPw&s',
+    alt_text: 'Karam Sakinalu',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-8',
+    product_id: '8',
+    image_url: 'https://m.media-amazon.com/images/I/616OYKFACdL._UF1000,1000_QL80_.jpg',
+    alt_text: 'Khara Boondi',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-9',
+    product_id: '9',
+    image_url: 'https://vismaifood.com/storage/app/uploads/public/40c/1e6/695/thumb__700_0_0_0_auto.jpg',
+    alt_text: 'Laddu',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-10',
+    product_id: '10',
+    image_url: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/10/murukku-recipe.webp',
+    alt_text: 'Murukulu/Madugulu',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-11',
+    product_id: '11',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyO9zvxoG32lXpJ7GyDp5ka4swt_NZcvHMbw&s',
+    alt_text: 'Mysorepak',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'img-12',
+    product_id: '12',
+    image_url: 'https://www.telanganapindivantalu.in/wp-content/uploads/2021/01/pachi-mirchi-chakkalu.jpeg',
+    alt_text: 'Pachi Mirchi Chakkalu',
+    is_primary: true,
+    display_order: 1,
+    created_at: new Date().toISOString()
+  }
+];
 
 export const testimonials: Testimonial[] = [
   {

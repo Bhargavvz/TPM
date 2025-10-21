@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { MapPin, Package, Clock, ShoppingCart, Star, Heart, Edit } from 'lucide-react';
 import { Product, ProductImage, ProductReview } from '../types/database';
 import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
 import { products as mockProducts, productImages as mockProductImages, productReviews as mockProductReviews } from '../data/mockData';
 import { ReviewForm } from '../components/ReviewForm';
 import { ReviewsList, ReviewsSummary } from '../components/ReviewsList';
@@ -15,6 +16,7 @@ export function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const [addedToCart, setAddedToCart] = useState(false);
   const [reviews, setReviews] = useState<ProductReview[]>([]);
   const [showReviewForm, setShowReviewForm] = useState(false);
@@ -83,6 +85,15 @@ export function ProductDetail() {
       addToCart(product, quantity, selectedImage || undefined);
       setAddedToCart(true);
       setTimeout(() => setAddedToCart(false), 2000);
+    }
+  };
+
+  const handleWishlistToggle = () => {
+    if (!product) return;
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id);
+    } else {
+      addToWishlist(product);
     }
   };
 
@@ -279,9 +290,18 @@ export function ProductDetail() {
                 {addedToCart ? 'Added to Cart!' : 'Add to Cart'}
               </button>
 
-              <button className="w-full border-2 border-orange-600 text-orange-600 hover:bg-orange-50 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center gap-2">
-                <Heart className="w-5 h-5" />
-                Add to Wishlist
+              <button
+                onClick={handleWishlistToggle}
+                className={`w-full border-2 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center gap-2 ${
+                  product && isInWishlist(product.id)
+                    ? 'border-red-600 text-red-600 bg-red-50'
+                    : 'border-orange-600 text-orange-600 hover:bg-orange-50'
+                }`}
+              >
+                <Heart className={`w-5 h-5 ${
+                  product && isInWishlist(product.id) ? 'fill-red-600' : ''
+                }`} />
+                {product && isInWishlist(product.id) ? 'Remove from Wishlist' : 'Add to Wishlist'}
               </button>
             </div>
 

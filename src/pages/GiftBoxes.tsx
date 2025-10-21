@@ -11,18 +11,18 @@ export function GiftBoxes() {
   const [message, setMessage] = useState('');
 
   const availableProducts = [
-    { id: 1, name: 'Chagodi', price: 500, image: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 2, name: 'Chuduva', price: 500, image: 'https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 3, name: 'Garjalu', price: 650, image: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 4, name: 'Gavvalu Bellam', price: 400, image: 'https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 5, name: 'Kara Billalu-Pappu', price: 250, image: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 6, name: 'Karabillalu-Palli', price: 250, image: 'https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 7, name: 'Karam Sakinalu', price: 270, image: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 8, name: 'Khara Boondi', price: 250, image: 'https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 9, name: 'Laddu', price: 325, image: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 10, name: 'Murukulu/Madugulu', price: 500, image: 'https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 11, name: 'Mysorepak', price: 650, image: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 12, name: 'Pachi Mirchi Chakkalu', price: 270, image: 'https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=400' }
+    { id: 1, name: 'Chagodi', price: 500, image: 'https://us2guntur.com/images//10064img/Chagodi_B_191115.jpg' },
+    { id: 2, name: 'Chuduva', price: 500, image: 'https://pushmycart.com/cdn/shop/products/5dce32705968462a48b5523b_1200x1200.jpg?v=1742301446' },
+    { id: 3, name: 'Garjalu', price: 650, image: 'https://i0.wp.com/ahahomefoods.com/wp-content/uploads/2023/02/Garijelu-Coconut-and-Sugar.jpg?fit=600%2C600&ssl=1' },
+    { id: 4, name: 'Gavvalu Bellam', price: 400, image: 'https://dpfoods.in/wp-content/uploads/2025/03/bellam-gavvalu.png' },
+    { id: 5, name: 'Kara Billalu-Pappu', price: 250, image: 'https://www.telanganapindivantalu.in/wp-content/uploads/2019/12/Karabilallu-pappu.jpg' },
+    { id: 6, name: 'Karabillalu-Palli', price: 250, image: 'https://www.telanganapindivantalu.in/wp-content/uploads/2019/12/Karabilalu-palli.jpg' },
+    { id: 7, name: 'Karam Sakinalu', price: 270, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZxEI0pwvZlKJ23R00By1EciB2a4fJbZjLPw&s' },
+    { id: 8, name: 'Khara Boondi', price: 250, image: 'https://m.media-amazon.com/images/I/616OYKFACdL._UF1000,1000_QL80_.jpg' },
+    { id: 9, name: 'Laddu', price: 325, image: 'https://vismaifood.com/storage/app/uploads/public/40c/1e6/695/thumb__700_0_0_0_auto.jpg' },
+    { id: 10, name: 'Murukulu/Madugulu', price: 500, image: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/10/murukku-recipe.webp' },
+    { id: 11, name: 'Mysorepak', price: 650, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyO9zvxoG32lXpJ7GyDp5ka4swt_NZcvHMbw&s' },
+    { id: 12, name: 'Pachi Mirchi Chakkalu', price: 270, image: 'https://www.telanganapindivantalu.in/wp-content/uploads/2021/01/pachi-mirchi-chakkalu.jpeg' }
   ];
 
   const toggleProduct = (productId: number) => {

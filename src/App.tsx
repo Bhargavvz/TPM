@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
+import { WishlistProvider } from './context/WishlistContext';
 import { Layout } from './components/Layout/Layout';
 import { Home } from './pages/Home';
 import { Shop } from './pages/Shop';
@@ -20,7 +21,8 @@ import { Disclaimer } from './pages/Disclaimer';
 function App() {
   return (
     <CartProvider>
-      <Router>
+      <WishlistProvider>
+        <Router>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -41,6 +43,7 @@ function App() {
           </Routes>
         </Layout>
       </Router>
+      </WishlistProvider>
     </CartProvider>
   );
 }

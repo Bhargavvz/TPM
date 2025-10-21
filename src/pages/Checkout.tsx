@@ -20,7 +20,7 @@ export function Checkout() {
     notes: ''
   });
 
-  const shippingCost = 50;
+  const shippingCost = 0; // Free shipping
   const subtotal = getCartTotal();
   const total = subtotal + shippingCost;
 
@@ -67,7 +67,7 @@ export function Checkout() {
         total,
         status: 'pending',
         payment_status: 'pending',
-        payment_method: 'online',
+        payment_method: 'Pay by Advance through UPI',
         notes: formData.notes,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
@@ -291,7 +291,7 @@ export function Checkout() {
                 </div>
                 <div className="flex justify-between text-gray-700">
                   <span>Shipping</span>
-                  <span className="font-semibold">₹{shippingCost.toFixed(2)}</span>
+                  <span className="font-semibold text-green-600">Free shipping</span>
                 </div>
                 <div className="border-t pt-3 flex justify-between text-xl font-bold text-gray-900">
                   <span>Total</span>
